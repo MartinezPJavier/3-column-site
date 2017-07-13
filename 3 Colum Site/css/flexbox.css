@@ -1,0 +1,59 @@
+
+/*===============
+Media Queries- call it flexbox.css
+=================*/
+
+@media (min-width: 769px){
+  .main-header,
+  .main-nav,
+  .row{
+    display: flex;
+  }
+  .main-header{
+    flex-direction: column;
+    align-items: center;
+  }
+  .col{
+    flex: 1 50%;
+  }
+  .row{
+    flex-wrap: wrap;
+  }
+  .secondary{
+    order: -1;
+  }
+}
+
+@media (min-width: 1025px) {
+  .main-header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .col{
+    flex-basis: 0;
+  }
+  .primary{
+    flex-grow: 1.4;
+  }
+
+}
+
+/*===============
+Media Queries
+to add sticky footer:
+add to base.css at the bottom of code.
+=================*/
+
+@media (min-width:769px) {
+  .main-header,
+  .row,
+.footer-inner{
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1150px;
+}
+.tagline {
+  font-size: 1.4em;
+}
+
+}
